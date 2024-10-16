@@ -23,7 +23,7 @@ humidityElement.innerHTML = `${response.data.temperature.humidity}%,`;
 windElement.innerHTML  = `${response.data.wind.speed} Km/h`;
 timesElement.innerHTML = formatDate(date);
 iconElement.innerHTML =`<img src = "${response.data.condition.icon_url}"  class="weather-icon" />`;
-feelslike.innerHTML = response.data.temperature.feels_like;
+feelslike.innerHTML = Math.round(response.data.temperature.feels_like);
 
 getForecast(response.data.city);
 }
